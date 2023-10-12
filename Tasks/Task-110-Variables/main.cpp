@@ -17,18 +17,23 @@ DigitalOut LED_BLUE_LE(LED_BLUE_LE_PIN,0);
 DigitalIn BlueButton(USER_BUTTON);
 
 BusOut ledData(LED_D0_PIN, LED_D1_PIN, LED_D2_PIN, LED_D3_PIN, LED_D4_PIN, LED_D5_PIN, LED_D6_PIN, LED_D7_PIN);
-
+LCD_16X2_DISPLAY lcd;
 
 int main()
 {
-    printf("\nTASK-110\n");
+    lcd.cls();
+    lcd.puts("TASK-110");
+
+    printf("TASK-110\n");
+    printf("\nNEW LINE\n");
 
     // Integer
-    int count = 0;
+    int count;
+    count = 10;
     printf("count = %d\n", count);
 
-    // Add one to count
-    count = count + 1;
+    // Add two to count
+    count = count + 2;
     printf("New value of count = %d\n", count);
 
     // Char
