@@ -24,12 +24,11 @@ int main()
     lcd.cls();
     lcd.puts("TASK-110");
 
-    printf("TASK-110\n");
+    printf("\nTASK-110\n");
     printf("\nNEW LINE\n");
 
     // Integer
-    int count;
-    count = 10;
+    int count = 10;
     printf("count = %d\n", count);
 
     // Add two to count
@@ -38,14 +37,14 @@ int main()
 
     // Char
     char character;
-    character = 'A';
+    character = 65;
     printf("The character %c has the ASCII code %d\n", character, character);
 
     // Short
-    short shortCount = 32766;
+    int shortCount = 32766;
     printf("The value of shortCount is %hd\n", shortCount);
-    shortCount = shortCount + 1;
-    printf("add 1 and shortCount is %hd\n", shortCount);
+    shortCount = shortCount + 2;
+    printf("add 2 and shortCount is %hd\n", shortCount);
 
     // Long long
     long long NN = 0x12345678ABCD0001LL; //Literal in HEX
