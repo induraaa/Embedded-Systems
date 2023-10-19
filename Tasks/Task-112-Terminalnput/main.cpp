@@ -31,11 +31,11 @@ int main()
 
     // Stop
     while (parsed > 0) {
-        wait_us(delay_ms * 1000);
+        wait_us(delay_ms * 1000000);
         led1 = 1;
         led2 = 1;
         led3 = 1;
-        wait_us(delay_ms * 1000);
+        wait_us(delay_ms * 1000000);
         led1 = 0;
         led2 = 0;
         led3 = 0;        
