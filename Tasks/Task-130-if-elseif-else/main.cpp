@@ -1,3 +1,4 @@
+#include "mbed_wait_api.h"
 #include "uop_msb.h"
 using namespace uop_msb;
 
@@ -30,18 +31,26 @@ int main()
 
         //Test Button A
         if (btnA == 1) {
-            redLED = !redLED;    //Toggle RED led
+            redLED = !redLED;   //Toggle RED led
+            wait_us(100000);
             count = count + 1;   //Increment count
             disp = count;        //Update display
+            wait_us(100000);
         }
-        wait_us(10000);
-
-        if (btnB == 1) {
-            redLED = !greenLED;    //Toggle RED led
+        else if (btnB == 1) {
+            greenLED = !greenLED;    //Toggle RED led
+            wait_us(100000);
             count = count - 1;   //Decrement count
             disp = count;        //Update display
+            wait_us(100000);
         }
-        wait_us(10000);  
+        else {
+            yellowLED = 1;
+            wait_us(500000);
+            yellowLED = 0;
+            wait_us(500000);
+        }
+  
     }
 }
 
