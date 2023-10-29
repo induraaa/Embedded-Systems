@@ -25,7 +25,7 @@ int main()
     disp = count;
 
     while (true) {
-        
+    
         //Read button without blocking
         int btnA = ButtonA, btnB = ButtonB;     //Local to the while-loop  
 
