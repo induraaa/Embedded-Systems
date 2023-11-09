@@ -28,6 +28,9 @@ int main()
         for (unsigned int m=0; m<100; m++) {
             unsigned short ldrVal   = ldr.read_u16();
             samples[m] = ldrVal;
+
+            
+
             wait_us(10000);          // 10ms
         }
 
