@@ -1,6 +1,7 @@
 #include "uop_msb.h"
 #include <chrono>
 #include <cstdint>
+#include <cstdio>
 using namespace uop_msb;
 using namespace chrono;
 
@@ -46,13 +47,19 @@ int main()
         //Read Analog to Digital Converter values (16 bit)
         unsigned short potVal   = pot.read_u16();
         unsigned short lightVal = ldr.read_u16();
-        signed int micVal   = mic.read_u16(); 
+        int micVal   = mic.read_u16(); 
 
+        int new_value = micVal - 0x8000;
+
+        if (lightVal < 0x6000) {
+            ledDisp = 1;
+        }
         //Write to terminal
         printf("--------------------------------\n");
         printf("Potentiometer: %X\n", potVal);
         printf("Light Dependant Resistor: %X\n", lightVal);
-        printf("Microphone: %X\n", micVal);   
+        printf("Microphone: %d\n", micVal);   
+        printf("Value: %d\n", new_value);
 
         //Wait 0.25 seconds
         wait_us(500000);

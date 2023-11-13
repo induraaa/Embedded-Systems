@@ -1,6 +1,7 @@
 #include "uop_msb.h"
 #include <chrono>
 #include <cstdint>
+#include <cstdio>
 using namespace uop_msb;
 using namespace chrono;
 
@@ -22,6 +23,7 @@ int main()
         printf("%X ", samples[m]);
     }
 
+    printf(samples);
     // Automatic headlamp 
     while (true) {
 
