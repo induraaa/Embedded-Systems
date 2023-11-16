@@ -7,13 +7,13 @@ DigitalOut LED_RED_LE(LED_RED_LE_PIN);
 DigitalOut LED_GRN_LE(LED_GRN_LE_PIN);
 DigitalOut LED_BLUE_LE(LED_BLUE_LE_PIN);
 
-void led_init()
+void led_init(uint8_t dat, bool enabled)
 {
-    //Disable the LED outputs
+       //Disable the LED outputs
     LED_BAR_OE = 1;
 
     //Set data to 0
-    dataBits = 0;
+    dataBits = dat;
 
     //Give a little time
     wait_us(1);
@@ -30,13 +30,17 @@ void led_init()
     LED_RED_LE  = 0;
     LED_GRN_LE  = 0;
     LED_BLUE_LE  = 0;
+
+    if (enabled) {
+        LED_BAR_OE = 0;
+    }
 }
 
 int main()
 {
     printf("Functions demo\n");
 
-    led_init();
+    led_init(0xFF, true);
 
     while (true) {
 
@@ -89,4 +93,3 @@ int main()
     }
 
 }
-

@@ -60,7 +60,7 @@ int main()
     for (unsigned int n=0; n<3; n++) {
         unsigned int x = rand();
         x = x % 65536; //16 bit (2 bytes)
-        sprintf(str6, "I guess %X", x);
+        printf(str6, "I guess %X", x);
         printf("%s\n", str6);
     }
 
