@@ -21,7 +21,7 @@ LCD_16X2_DISPLAY lcd;
 
 int main()
 {
-    lcd.cls();
+ lcd.cls();
     lcd.puts("TASK-110");
 
     printf("\nTASK-110\n");

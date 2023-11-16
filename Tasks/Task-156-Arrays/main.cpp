@@ -22,9 +22,14 @@ int main()
     for (unsigned int m=0; m<100; m++) {
         printf("%X ", samples[m]);
     }
+<<<<<<< HEAD
     
     float sum = 0.0;
     float avg = 0.0;
+=======
+
+    printf(samples);
+>>>>>>> 9f9ed622787d206244bf6552f850208339d2123f
     // Automatic headlamp 
     while (true) {
 
@@ -32,6 +37,9 @@ int main()
             unsigned short ldrVal   = ldr.read_u16();
             sum = sum + ldrVal;
             samples[m] = ldrVal;
+
+            
+
             wait_us(10000);          // 10ms
         }
         avg = sum / 100;

@@ -43,7 +43,7 @@ int main()
         disp = count;
         
         //Wait for button A
-        while (buttonA == 0) {
+        while (buttonA == 1) {
         } 
 
         if (count > 0 ) {
@@ -51,7 +51,7 @@ int main()
         }
 
         //Wait for button B
-        while (buttonB == 0) {
+        while (buttonB == 1) {
         }
 
         if (count < 99 ) {
