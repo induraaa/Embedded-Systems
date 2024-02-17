@@ -30,9 +30,28 @@ int main()
 
     while (true)
     {
-        red = !red;
-        amber = !amber;
-        green = !green;
+        red = 1;
+        amber = 1;
+        green = 0;
         wait_us(WAIT_TIME_MS * 1000);
+
+        green = 1;
+        red = 0;
+        amber = 0;
+        wait_us(WAIT_TIME_MS * 1000);
+
+        amber = 1;
+        green = 0;
+        red = 0 ;
+        wait_us(WAIT_TIME_MS * 1000);
+
+
+        amber = 0;
+        green = 0;
+        red = 0 ;
+        wait_us(WAIT_TIME_MS * 1000);
+
+
+
     }
 }
