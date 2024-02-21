@@ -8,6 +8,8 @@ DigitalOut greenLED(PC_6,0);
 
 int main()
 {
+while (true){
+
     int grade, hits;
 
     printf("\n\nPress Return to Start\n\n");
@@ -27,7 +29,7 @@ int main()
     printf("scanf found %d hits\n",hits);
     printf("Grade entered = %d\n", grade);
     greenLED = 1;
-    
-    //Loop forever
-    while (true);
+    }
 }
+    //Loop forever
+   
